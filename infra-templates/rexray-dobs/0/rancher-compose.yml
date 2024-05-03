@@ -4,17 +4,16 @@
   description: |
     Docker volume plugin for DigitalOcean
   questions:
-    - variable: DOBS_TOKEN
+    - variable: GSTORAGE_TOKEN
       type: string
       required: true
-      label: DigitalOcean Token
-      description: DigitalOcean access token
-    - variable: DEFAULT_VOLUME_SIZE
-      type: int
+      label: Google Storage Token
+      description: JSON Token
+    - variable: DEFAULT_BUCKET
+      type: string
       required: true
-      default: 1
-      label: DigitalOcean default volume size
-      description: Size in GB to create volumes in DigitalOcean
+      label: Google Storage Bucket
+      description: Bucket a ser usado
     - variable: RANCHER_DEBUG
       type: enum
       required: true

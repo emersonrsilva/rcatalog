@@ -13,9 +13,8 @@ services:
       - /dev:/host/dev
       - /var/lib/rancher/volumes:/var/lib/rancher/volumes:shared
     environment:
-      LIBSTORAGE_SERVICE: 'dobs'
-      DOBS_TOKEN: '${DOBS_TOKEN}'
-      DEFAULT_VOLUME_SIZE: '${DEFAULT_VOLUME_SIZE}'
+      GSTORAGE_TOKEN: '${GSTORAGE_TOKEN}'
+      DEFAULT_BUCKET: '${DEFAULT_BUCKET}'
       RANCHER_DEBUG: '${RANCHER_DEBUG}'
     labels:
       io.rancher.container.pull_image: always

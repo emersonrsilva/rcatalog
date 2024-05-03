@@ -15,6 +15,9 @@ init()
 }
 
 create() {
+    echo $OPTS
+    print_error "nao posso criaro o volume: $volume"
+    return
     if [ -z "${OPTS[name]}" ]; then
         print_error "name is required"
     fi
@@ -26,8 +29,9 @@ create() {
         VOLUME_SIZE=$DEFAULT_VOLUME_SIZE
     fi
 
-    VOLUME_ID=`rexray volume get --format jsonp $VOLUME_NAME | jq -r '.[].id' 2> /dev/null`
-
+    #VOLUME_ID=`rexray volume get --format jsonp $VOLUME_NAME | jq -r '.[].id' 2> /dev/null`
+    VOLUME_ID = "volume no google"
+    
     if [ -z "$VOLUME_ID" ]; then
         volume=`rexray volume create \
                    --format jsonp \
@@ -46,6 +50,8 @@ create() {
 }
 
 attach() {
+    echo "iniciar o attach"
+    echo $OPTS
     if [ -z "${OPTS[volumeID]}" ]; then
         print_error "volumeID is required"
     fi
@@ -143,4 +149,11 @@ delete() {
 }
 
 # Every script must call main as such
+echo "comandos recebidos"
+echo "$@"
+echo ""
+echo ""
+echo "VARIAVEIS"
+printenv
+exit 1
 main "$@"
