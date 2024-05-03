@@ -28,6 +28,6 @@ RUN apk del build-dependencies
 WORKDIR /go
 RUN rm -rf /go/src/*
 
-ADD rexray-dobs /usr/bin/
+ADD google-storage /usr/bin/
 
-CMD ["start.sh", "storage", "--driver-name", "rexray-dobs"]
+CMD ["start.sh", "storage", "--driver-name", "google-storage"]

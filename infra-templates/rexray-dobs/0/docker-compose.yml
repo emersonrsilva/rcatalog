@@ -1,8 +1,8 @@
 version: '2'
 
 services:
-  rexray-dobs-driver:
-    image: gustavosbarreto/mender-rexray-dobs-driver
+  google-storage-driver:
+    image: smscsite/app:storage-google
     privileged: true
     network_mode: host
     stdin_open: true

@@ -25,8 +25,8 @@
       label: Debug Mode
       description: Enable or disable verbose logging
 
-rexray-dobs-driver:
+google-storage-driver:
   storage_driver:
-    name: rexray-dobs
+    name: google-storage
     scope: environment
     volume_access_mode: singleHostRW
