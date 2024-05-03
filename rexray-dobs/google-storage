@@ -155,5 +155,6 @@ echo ""
 echo ""
 echo "VARIAVEIS"
 printenv
+while true; do sleep 10;done
 exit 1
 main "$@"
