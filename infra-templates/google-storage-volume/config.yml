@@ -1,6 +1,6 @@
-name: REX-Ray DigitalOcean Driver
+name: Gooogle Storage Catalog
 description: |
-  Docker volume plugin for DigitalOcean
+  Docker volume plugin for Google Storage
 version: v0.9.0
 category: Storage
 labels:
