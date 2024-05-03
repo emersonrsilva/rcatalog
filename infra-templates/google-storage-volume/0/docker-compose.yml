@@ -4,7 +4,6 @@ services:
   google-storage-driver:
     image: smscsite/app:storage-google
     privileged: true
-    network_mode: host
     stdin_open: true
     tty: true
     volumes:

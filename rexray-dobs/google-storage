@@ -148,13 +148,4 @@ delete() {
     print_success
 }
 
-# Every script must call main as such
-echo "comandos recebidos"
-echo "$@"
-echo ""
-echo ""
-echo "VARIAVEIS"
-printenv
-while true; do sleep 10;done
-exit 1
 main "$@"
